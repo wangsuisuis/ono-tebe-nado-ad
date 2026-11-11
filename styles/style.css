@@ -1,3 +1,4 @@
+/* ---------- Header ---------- */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -61,6 +62,7 @@
   margin-top: 8px;
 }
 
+/* ---------- Cover ---------- */
 .cover {
   position: relative;
   display: flex;
@@ -99,11 +101,14 @@
   display: block;
 }
 
+/* 核心：用 margin 抵消字间距造成的错位 */
 .aligned-text_center {
+  margin-right: -0.3em;
   text-align: center;
 }
 
 .aligned-text_right {
+  margin-right: -0.3em;
   text-align: right;
 }
 
@@ -134,6 +139,7 @@
   cursor: pointer;
 }
 
+/* ---------- Lots ---------- */
 .lots {
   padding: 80px 50px;
 }
@@ -164,7 +170,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* 核心：强制文字一上一下对齐 */
   height: 100%;
   padding: 50px 40px;
   color: #fff;
@@ -220,6 +226,7 @@
   text-underline-offset: 4px;
 }
 
+/* ---------- About ---------- */
 .about {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -265,6 +272,7 @@
   margin-bottom: 0;
 }
 
+/* ---------- Footer ---------- */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
