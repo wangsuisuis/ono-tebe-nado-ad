@@ -101,14 +101,13 @@
   display: block;
 }
 
-/* 核心：用 margin 抵消字间距造成的错位 */
 .aligned-text_center {
-  margin-right: -0.3em;
+  padding-left: 0.3em;
   text-align: center;
 }
 
 .aligned-text_right {
-  margin-right: -0.3em;
+  padding-right: 0.3em;
   text-align: right;
 }
 
@@ -170,7 +169,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 核心：强制文字一上一下对齐 */
+  justify-content: space-between;
   height: 100%;
   padding: 50px 40px;
   color: #fff;
