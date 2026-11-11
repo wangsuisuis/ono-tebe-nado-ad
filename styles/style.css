@@ -13,16 +13,23 @@
 .header__links-list {
   display: flex;
   gap: 32px;
-  padding-left: 20px;
-  list-style-type: circle;
+  padding: 0;
+  list-style: none;
 }
 
 .header__links-list-item {
-  display: list-item;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.header__links-list-item_no-bullit {
-  list-style-type: none;
+/* 完美还原列表圆点 */
+.header__links-list-item:not(.header__links-list-item_no-bullit)::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  border-radius: 50%;
 }
 
 .header__link {
@@ -161,15 +168,15 @@
 
 .lots__card-list-item {
   flex: 1;
-  height: 450px;
   min-width: 0;
+  height: 450px;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 修复：文字贴顶，不再被推到最下面 */
+  justify-content: flex-start; /* 修复：文字紧贴顶部 */
   height: 100%;
   padding: 50px 40px;
   color: #fff;
@@ -189,7 +196,7 @@
 
 .card__title {
   position: relative;
-  margin: 0;
+  margin: 0 0 24px; /* 修复：标题下方留出间距 */
   font-size: 22px;
   font-weight: bold;
   line-height: 1.2;
@@ -200,7 +207,7 @@
 
 .card__text {
   position: relative;
-  margin: 24px 0 0 0; /* 修复：和标题保持 24px 的距离 */
+  margin: 0;
   font-size: 20px;
   line-height: 1.2;
   z-index: 2;
@@ -317,7 +324,7 @@
 .footer__social-list {
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
+  gap: 48px; /* 修复：间距调大以匹配原图 */
   margin: 0;
   padding: 0;
   list-style: none;
