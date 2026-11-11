@@ -17,8 +17,12 @@
   list-style-type: circle;
 }
 
+.header__links-list-item {
+  display: list-item; /* 修复：让 flex 布局下的列表显示圆点 */
+}
+
 .header__links-list-item_no-bullit {
-  list-style: none;
+  list-style-type: none;
 }
 
 .header__link {
@@ -36,7 +40,6 @@
 }
 
 .header__logo-image {
-  display: block; /* 防止图片底部出现多余留白 */
   width: 100%;
   height: auto;
 }
@@ -96,15 +99,11 @@
 }
 
 .aligned-text_center {
-  /* 抵消字间距导致的居中偏差 */
-  margin-right: -0.3em;
-  text-align: center;
+  text-align: center; /* 修复：移除了导致右偏移的负边距 */
 }
 
 .aligned-text_right {
-  /* 抵消字间距导致的右对齐偏差 */
-  margin-right: -0.3em;
-  text-align: right;
+  text-align: right; /* 修复：移除了导致右偏移的负边距 */
 }
 
 .cover__description {
@@ -249,7 +248,6 @@
 }
 
 .about__logo-image {
-  display: block;
   width: 148px;
   height: auto;
 }
@@ -298,7 +296,7 @@
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* 修复：让菜单文字左对齐，而不是居中 */
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -330,7 +328,6 @@
 }
 
 .footer__social-icon {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
