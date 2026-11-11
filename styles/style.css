@@ -13,7 +13,8 @@
 .header__links-list {
   display: flex;
   gap: 32px;
-  list-style: circle;
+  padding-left: 20px;
+  list-style-type: circle;
 }
 
 .header__links-list-item_no-bullit {
@@ -60,7 +61,7 @@
 /* ---------- Cover ---------- */
 .cover {
   position: relative;
-  min-height: 757px; 
+  min-height: 757px;
   padding: 165px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
@@ -94,19 +95,20 @@
 }
 
 .aligned-text_center {
+  padding-left: 0.3em;
   text-align: center;
-  padding-left: 30px; 
 }
 
 .aligned-text_right {
+  padding-right: 0.3em;
   text-align: right;
 }
 
 .cover__description {
   position: absolute;
+  right: 50px;
   bottom: 50px;
   left: 50px;
-  right: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,7 +157,7 @@
 
 .lots__card-list-item {
   flex: 1;
-  height: 450px; /* 固定高度，确保卡片对齐 */
+  height: 450px;
   min-width: 0;
 }
 
@@ -200,7 +202,6 @@
   z-index: 2;
 }
 
-/* 更改了路径 */
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
 }
