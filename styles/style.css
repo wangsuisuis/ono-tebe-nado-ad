@@ -36,6 +36,7 @@
 }
 
 .header__logo-image {
+  display: block; /* 防止图片底部出现多余留白 */
   width: 100%;
   height: auto;
 }
@@ -95,12 +96,14 @@
 }
 
 .aligned-text_center {
-  padding-left: 0.3em;
+  /* 抵消字间距导致的居中偏差 */
+  margin-right: -0.3em;
   text-align: center;
 }
 
 .aligned-text_right {
-  padding-right: 0.3em;
+  /* 抵消字间距导致的右对齐偏差 */
+  margin-right: -0.3em;
   text-align: right;
 }
 
@@ -246,6 +249,7 @@
 }
 
 .about__logo-image {
+  display: block;
   width: 148px;
   height: auto;
 }
@@ -326,6 +330,7 @@
 }
 
 .footer__social-icon {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
