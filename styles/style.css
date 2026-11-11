@@ -18,7 +18,7 @@
 }
 
 .header__links-list-item {
-  display: list-item; /* 修复：让 flex 布局下的列表显示圆点 */
+  display: list-item;
 }
 
 .header__links-list-item_no-bullit {
@@ -99,11 +99,13 @@
 }
 
 .aligned-text_center {
-  text-align: center; /* 修复：移除了导致右偏移的负边距 */
+  /* 抵消字间距造成的居中偏差 */
+  margin-right: -0.3em;
+  text-align: center;
 }
 
 .aligned-text_right {
-  text-align: right; /* 修复：移除了导致右偏移的负边距 */
+  text-align: right;
 }
 
 .cover__description {
@@ -296,7 +298,8 @@
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 修复：让菜单文字左对齐，而不是居中 */
+  /* 修复：恢复居中，原图这里绝对是居中的 */
+  align-items: center; 
   gap: 8px;
   margin: 0;
   padding: 0;
