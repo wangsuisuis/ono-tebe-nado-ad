@@ -5,8 +5,10 @@
 Ссылка на репозиторий: https://github.com/wangsuisuis/ono-tebe-nado-ad
 
 ## Технологии
+
 - HTML5
 - CSS3
 
 ## Запуск
+
 Откройте `index.html` в браузере.
