@@ -1,3 +1,18 @@
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* ---------- Header ---------- */
 .header {
   display: grid;
@@ -99,7 +114,6 @@
 }
 
 .aligned-text_center {
-  /* 抵消字间距造成的居中偏差 */
   margin-right: -0.3em;
   text-align: center;
 }
@@ -298,8 +312,7 @@
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  /* 修复：恢复居中，原图这里绝对是居中的 */
-  align-items: center; 
+  align-items: center;
   gap: 8px;
   margin: 0;
   padding: 0;
