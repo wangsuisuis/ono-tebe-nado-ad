@@ -30,7 +30,7 @@ a {
 }
 
 img {
-  display: block;
+  display: block; /* 绝对关键：消除图片底部留白导致的像素错位 */
   width: 100%;
 }
 
