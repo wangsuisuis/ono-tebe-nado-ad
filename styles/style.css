@@ -101,14 +101,13 @@
   display: block;
 }
 
-/* 核心修复：消除两端字间距带来的偏移 */
 .aligned-text_center {
-  margin-right: -0.3em;
+  padding-left: 0.3em;
   text-align: center;
 }
 
 .aligned-text_right {
-  margin-right: -0.3em;
+  padding-right: 0.3em;
   text-align: right;
 }
 
@@ -166,12 +165,11 @@
   min-width: 0;
 }
 
-/* 核心修复：文字上下两端对齐 */
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* 强制文字一上一下 */
   height: 100%;
   padding: 50px 40px;
   color: #fff;
@@ -297,11 +295,11 @@
   margin-top: 8px;
 }
 
-/* 核心修复：页脚菜单严格居中 */
+/* 修复：原设计稿中页脚菜单是左对齐的 */
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
   gap: 8px;
   margin: 0;
   padding: 0;
