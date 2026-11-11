@@ -101,6 +101,7 @@
   display: block;
 }
 
+/* 核心修复：消除两端字间距带来的偏移 */
 .aligned-text_center {
   margin-right: -0.3em;
   text-align: center;
@@ -165,12 +166,12 @@
   min-width: 0;
 }
 
-/* 修复：绝对标准的卡片布局 */
+/* 核心修复：文字上下两端对齐 */
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 标题在顶，文字在底 */
+  justify-content: space-between;
   height: 100%;
   padding: 50px 40px;
   color: #fff;
@@ -296,10 +297,11 @@
   margin-top: 8px;
 }
 
+/* 核心修复：页脚菜单严格居中 */
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 修复：严格居中 */
+  align-items: center;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -318,7 +320,7 @@
 .footer__social-list {
   display: flex;
   justify-content: flex-end;
-  gap: 48px; /* 修复：严格间距 */
+  gap: 48px;
   margin: 0;
   padding: 0;
   list-style: none;
