@@ -106,12 +106,12 @@
 
 .aligned-text_center {
   text-align: center;
-  padding-left: 0.3em; /* 彻底修复居中偏移 */
+  padding-left: 0.3em; /* 补偿左侧偏移 */
 }
 
 .aligned-text_right {
   text-align: right;
-  padding-right: 0.3em; /* 彻底修复右对齐偏移 */
+  padding-right: 0.3em; /* 补偿右侧偏移 */
 }
 
 .cover__description {
@@ -165,7 +165,7 @@
   flex: 1;
   height: 450px;
   min-width: 0;
-  margin-right: 25px; /* 放弃 gap 防错位 */
+  margin-right: 25px;
 }
 
 .lots__card-list-item:last-child {
@@ -176,7 +176,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 标题在顶，文字在底 */
+  justify-content: space-between; /* 绝对：标题在上，文字在下 */
   height: 100%;
   padding: 50px 40px;
   color: #fff;
@@ -311,7 +311,7 @@
 .footer__menu-list {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 核心修复：完全居中 */
+  align-items: center; /* 居中 */
   margin: 0;
   padding: 0;
   list-style: none;
