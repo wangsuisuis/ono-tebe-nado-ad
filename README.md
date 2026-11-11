@@ -2,6 +2,8 @@
 
 Учебный проект: лендинг аукциона необычных лотов.
 
+Ссылка на репозиторий: https://github.com/wangsuisuis/ono-tebe-nado-ad
+
 ## Технологии
 - HTML5
 - CSS3
